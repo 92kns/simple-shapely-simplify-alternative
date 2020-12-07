@@ -8,17 +8,17 @@ Here I look at a simple method that uses simple trigonometry to look at the inte
 
 here is a quick example:
 
-![test1](./pics/example1.jpg) 
+![test1](./pics/hex1.jpg) 
 
 randomly generated polygon with 7 vertices. Consider this the *goal* result.
 
-now I'll add randomly generated points along the edges to emulate the types of problematic polygons mentioned earlier
+now I'll add randomly generated points along the edges to emulate the types of problematic polygons mentioned earlier (here I have randomly generated 5 points per side)
 
-![test2](./pics/example1_degen.jpg)
+![test2](./pics/hex1_degen.jpg)
 
 then if one runs the method of reducing points via interior angles...
 
-![test3](./pics/example1_angle.jpg)
+![test3](./pics/hex1_interior.jpg)
 
 as desired!
 
