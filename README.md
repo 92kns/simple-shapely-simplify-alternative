@@ -10,7 +10,7 @@ here is a quick example:
 
 ![test1](./pics/hex1.jpg) 
 
-randomly generated polygon with 6 vertices. Consider this the *goal* result.
+A generated hexagon with 6 vertices. Consider this the *goal* result.
 
 now I'll add randomly generated points along the edges to emulate the types of problematic polygons mentioned earlier (here I have randomly generated 5 points per side to be collinear with the edges)
 
