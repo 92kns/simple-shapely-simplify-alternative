@@ -10,13 +10,20 @@ here is a quick example:
 
 ![test1](./pics/hex1.jpg) 
 
-randomly generated polygon with 7 vertices. Consider this the *goal* result.
+randomly generated polygon with 6 vertices. Consider this the *goal* result.
 
-now I'll add randomly generated points along the edges to emulate the types of problematic polygons mentioned earlier (here I have randomly generated 5 points per side)
+now I'll add randomly generated points along the edges to emulate the types of problematic polygons mentioned earlier (here I have randomly generated 5 points per side to be collinear with the edges)
 
 ![test2](./pics/hex1_degen.jpg)
 
-then if one runs the method of reducing points via interior angles...
+
+Below is an attempt using the  `simplify()` method with `preserve_topology = False` (which corersponds to using the [Douglas-Peucker algorithm](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm))  and a range of tolerance values: `[1e-10, 0.1, 1, 10]` (left to right, respectively)
+
+![test simplify](./pics/hex_simplify.jpg)
+
+As you can see there is still a persistent 'non vertex' point in this example. And at some point (i.e. tolerance value of 10) the structure of the hexagon is lost.
+
+Now if one runs the method of reducing points via interior angles as proposed..
 
 ![test3](./pics/hex1_interior.jpg)
 
