@@ -17,13 +17,20 @@ now I'll add randomly generated points along the edges to emulate the types of p
 ![test2](./pics/hex1_degen.jpg)
 
 
-Below is an attempt using the  `simplify()` method with `preserve_topology = False` (which corersponds to using the [Douglas-Peucker algorithm](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm))  and a range of tolerance values: `[1e-10, 0.1, 1, 10]` (left to right, respectively)
+Below is an attempt using the  `simplify()` method with `preserve_topology = False` (which corersponds to using the [Douglas-Peucker algorithm](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm))  and a range of tolerance values: `[1e-10, 0.1, 1, 10, 100]` (left to right, respectively)
 
-![test simplify](./pics/hex_simplify.jpg)
+![test simplify no topology](./pics/hex_simple_notopology.jpg)
 
-As you can see there is still a persistent 'non vertex' point in this example. And at some point (i.e. tolerance value of 10) the structure of the hexagon is lost.
+As you can see there is still a persistent 'non vertex' point in this example. And at some point (i.e. tolerance value of 10) the structure of the hexagon is lost. At 100 it is gone!
 
-Now if one runs the method of reducing points via interior angles as proposed..
+Same approach as above, but with `preserve_topology = True`
+
+![test simplify topology](./pics/hex_simple_topology.jpg)
+
+Same deal, persistent points but in this case at a tolerance of 100 a polygon still exists.
+
+
+Now if one runs the method of reducing points via interior angles as proposed we get...
 
 ![test3](./pics/hex1_interior.jpg)
 
