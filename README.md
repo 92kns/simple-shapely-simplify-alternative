@@ -4,7 +4,7 @@ The `simplify()` method in shapely can be used to get rid of points that may be 
 
 More specifically I may come across a polygon that is represented by more coordinates than necessary (but has the correct number of *vertices*). Typically we only need the vertices to represent a simple polygon but sometimes there will be points along, and collinear, with the edges between vertices and `simplify()` fails to remove them.
 
-Here I look at a simple method that uses simple trigonometry to look at the interior angles to eliminate these points
+Here I look at a method that uses simple trigonometry to look at the interior angles to eliminate these points
 
 here is a quick example:
 
