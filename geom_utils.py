@@ -69,7 +69,7 @@ def generate_random_polygon( n):
 #     xy.append(xy[0])
     xy = list(xy)
     xy.append(xy[0])
-    return xy
+    return sg.Polygon(xy)
 
 
 def buffer_poly_vtx(poly,buffer=1):

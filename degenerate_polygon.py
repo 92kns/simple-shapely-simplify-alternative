@@ -1,4 +1,4 @@
-from shapely.geometry.polygon import (Polygon, geos_geom_from_py)
+from shapely.geometry.polygon import (Polygon, geos_polygon_from_py)
 import numpy as np
 import math
 import random
@@ -68,7 +68,7 @@ class DegeneratePolygon(Polygon):
         vector_rep = np.diff(ext_poly_coords,axis = 0)
         angles_list = []
         for i in range(0,len(vector_rep) -1 ):
-            angles_list.append(np.abs(get_angles(vector_rep[i],vector_rep[i+1])))
+            angles_list.append(np.abs(self.get_angles(vector_rep[i],vector_rep[i+1])))
 
 
         thresh_vals_by_deg = np.where(np.array(angles_list) > deg_tol)
